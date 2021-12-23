@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400');
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+::after,
+::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* from Type Scale END */
+#body {
+  background-color: #202124;
+}
+
+.svg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 4px;
+  padding: 4px;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* without pointer-events: none, the cursor as pointer won't work.  */
+}
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  flex-direction: column;
+  background-color: #3c4042;
+  width: max-content;
+  height: 100vh;
+}
+/* Profile image uploader */
+
+.drop-zone {
+  max-width: 35px;
+  min-width: 35px;
+  max-height: 35px;
+  min-height: 35px;
+  border-radius: 50%;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 0.19pt;
+  cursor: pointer;
+  color: #ccc;
+  border: 1px solid #9278ff;
+  margin: 7px;
+}
+
+.drop-zone__input {
+  display: none;
+}
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #3c4042;
+  background-size: cover;
+}
+/*  */
+
+@media only screen and (max-width: 768px) {
+  .navigation-container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* only apply the css when the screen has min width of 768 px. Or bigger than 768 px */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 'navigation-container main-container';
+  }
+}
+
+.navigation-container {
+  grid-area: navigation-container;
+}
+.main-container {
+  grid-area: main-container;
+  display: flex;
+  justify-content: space-around;
+  padding: 7vh;
+}
+/* at 768 px there was a bug without this. */
+@media (min-width: 767px) and (max-width: 768px) {
+  .wrapper {
+    display: inherit;
+  }
+}
+
+.new-invoice {
+  height: fit-content;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 0.1em;
+  padding-right: 1em;
+  border-radius: 20px;
+  border: transparent;
+  background-color: #9278ff;
+  color: white;
+  cursor: pointer;
+  font-family: 'inter', sans-serif;
+}
+.plus-sign {
+  border: 1px transparent;
+  background-color: white;
+  color: #9278ff;
+  padding: 1em;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.title {
+  color: white;
+}
+.heading {
+  font-size: 28px;
+}
+.counter-para {
+  color: gray;
+}

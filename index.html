@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+    <title>Invoice</title>
+  </head>
+
+  <body id="body">
+    <div class="wrapper">
+      <nav class="navigation-container">
+        <div class="svg">
+          <object
+            class="logo"
+            data="rightLogo.svg"
+            type="image/svg+xml"
+          ></object>
+        </div>
+        <div class="drop-zone">
+          <span class="drop-zone__prompt">Profile Image</span>
+          <input
+            type="file"
+            name="myFile"
+            id=""
+            class="drop-zone__input"
+            accept="image/*"
+          />
+        </div>
+      </nav>
+      <section class="main-container">
+        <div class="title">
+          <span class="heading">Invoices</span>
+          <p class="counter-para">
+            There are <span class="counter-display"></span> Total Invoices
+          </p>
+        </div>
+
+        <button class="new-invoice">
+          <span class="plus-sign">+</span>New Invoice
+        </button>
+      </section>
+      <div class="invoices"></div>
+    </div>
+  </body>
+</html>
+<!-- Add Counter, then add another grid row for invoices. Then click event to add the  -->
