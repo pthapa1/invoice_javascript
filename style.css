@@ -9,13 +9,13 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
+  color: white;
   font-family: 'Inter', sans-serif;
 }
 
-p {
+/* p {
   margin-bottom: 1rem;
-}
+} */
 
 h1,
 h2,
@@ -50,7 +50,7 @@ h5 {
 }
 
 small,
-.text_small {
+.text-small {
   font-size: 0.8rem;
 }
 ::after,
@@ -103,7 +103,6 @@ small,
   font-size: 8px;
   letter-spacing: 0.19pt;
   cursor: pointer;
-  color: #ccc;
   border: 1px solid #9278ff;
   margin: 7px;
 }
@@ -135,7 +134,10 @@ small,
   .wrapper {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas: 'navigation-container main-container';
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'navigation-container main-container'
+      'navigation-container invoice-container';
   }
 }
 
@@ -145,8 +147,8 @@ small,
 .main-container {
   grid-area: main-container;
   display: flex;
-  justify-content: space-around;
-  padding: 7vh;
+  justify-content: space-between;
+  padding: 5rem;
 }
 /* at 768 px there was a bug without this. */
 @media (min-width: 767px) and (max-width: 768px) {
@@ -164,9 +166,10 @@ small,
   border-radius: 20px;
   border: transparent;
   background-color: #9278ff;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   font-family: 'inter', sans-serif;
+  margin: auto 0;
 }
 .plus-sign {
   border: 1px transparent;
@@ -176,12 +179,29 @@ small,
   border-radius: 50%;
   margin-right: 10px;
 }
-.title {
+/* .title {
   color: white;
-}
+} */
 .heading {
   font-size: 28px;
 }
 .counter-para {
   color: gray;
+  margin-top: -0.5em;
+}
+.invoice-container {
+  grid-template-areas: invoice-container;
+  margin: 0 5rem;
+}
+.each-invoice {
+  display: flex;
+  justify-content: space-around;
+  background-color: #3c4042;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 0.8em;
+}
+.each-invoice > p {
+  font-size: 0.8rem;
 }
